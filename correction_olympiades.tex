@@ -1,0 +1,470 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}       
+\usepackage[francais]{babel}
+\usepackage{fullpage}
+%\usepackage{euler}
+\usepackage{amsmath}
+%\usepackage{framed}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{mathrsfs}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{graphicx}
+\usepackage{pstricks-add}
+\usepackage[a4paper]{geometry}
+\geometry{hscale=0.86,vscale=0.87,centering}
+
+\pagestyle{empty}
+
+%\newcommand{\Titre}[4]{\noindent \textsc{#1}} \hfill \textbf{\textsc{#2}}\\ #3 \hfill \emph{#4}\\  \hrule\vspace{\baselineskip}}
+
+\newcommand{\Titre}[3]{\begin{center} {\LARGE\textbf{\textsc{#1}}}\\ #2 \hfill \emph{#3} \\  \hrule\vspace{\baselineskip}\end{center}}
+
+\begin{document}
+
+
+\Titre{Correction des Olympiades Nationales de Mathématiques 2014}{Juliette Buet}{mars 2014}
+\thispagestyle{plain}
+\pagestyle{plain}
+
+
+%\title{DM de Mathématiques}
+%\date{19 novembre 2013}
+%\author{Asp. J.Buet}
+%\maketitle{}
+\section{\textsc{Figures équilibrées}}
+\begin{enumerate}
+\item  
+\begin{enumerate}
+\item Voici une figure contenant 7 points marqués et 5 droites :
+
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-2,-2)(7.1,5)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-2}{7.1}{(--15-0*x)/5}
+\psline(2,-2)(2,5)
+\psplot{-2}{7.1}{(-1--2*x)/3}
+\psplot{-2}{7.1}{(--6-2*x)/2}
+\psplot{-2}{7.1}{(--11-4*x)/-3}
+\begin{scriptsize}
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](0,3)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](5,3)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](2,3)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](2,1)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](2,-1)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](2.86,0.14)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](6.68,4.12)
+\end{scriptsize}
+\end{pspicture*}
+\item Voici une figure contenant 9 points marqués et 8 droites :
+
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-4.4,-1)(6,6)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-4.4}{6}{(--12-0*x)/4}
+\psline(1,-1)(1,6)
+\psplot{-4.4}{6}{(--4-2*x)/2}
+\psplot{-4.4}{6}{(-8-2*x)/-2}
+\psplot{-4.4}{6}{(--12-2*x)/2}
+\psplot{-4.4}{6}{(-0--2*x)/2}
+\psplot{-4.4}{6}{(-10-2*x)/-4}
+\psplot{-4.4}{6}{(--12--3*x)/7}
+\begin{scriptsize}
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](-1,3)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](3,3)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](1,5)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](1,1)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](5,5)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](1,3)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](-4,0)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](2.33,3.67)
+\psdots[dotsize=5pt 0,dotstyle=*,linecolor=blue](0.2,1.8)
+\end{scriptsize}
+\end{pspicture*}
+\end{enumerate}
+\item Voici une numérotation qui n'est pas magique :
+
+\begin{minipage}{0.4\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-1,0)(4,4)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-1}{3}{(--4--1*x)/2}
+\psplot{-1}{3}{(--4-0*x)/2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](0,2)
+\rput[bl](0.00,2.25){\large\black{$1$}}
+\psdots[dotstyle=*,linecolor=blue](2,3)
+\rput[bl](2.0,3.25){\large\black{$2$}}
+\psdots[dotstyle=*,linecolor=blue](2,2)
+\rput[bl](2.08,2.12){\large\black{$4$}}
+\psdots[dotstyle=*,linecolor=blue](2.98,3.49)
+\rput[bl](3.0,3.7){\large\black{$3$}}
+\psdots[dotstyle=*,linecolor=blue](3,2)
+\rput[bl](3.08,2.12){\large\black{$5$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+En effet\,: $1+2+3=6\neq 1+4+5 =10$.
+\end{minipage}
+
+Voici une numérotation magique de cette figure avec $K=10$ :
+
+\begin{minipage}{0.4\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-1,0)(4,4)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-1}{3}{(--4--1*x)/2}
+\psplot{-1}{3}{(--4-0*x)/2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](0,2)
+\rput[bl](0.0,2.25){\large\black{$5$}}
+\psdots[dotstyle=*,linecolor=blue](2,3)
+\rput[bl](2.0,3.25){\large\black{$2$}}
+\psdots[dotstyle=*,linecolor=blue](2,2)
+\rput[bl](2.08,2.12){\large\black{$4$}}
+\psdots[dotstyle=*,linecolor=blue](2.98,3.49)
+\rput[bl](3.06,3.62){\large\black{$3$}}
+\psdots[dotstyle=*,linecolor=blue](3,2)
+\rput[bl](3.08,2.12){\large\black{$1$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+En effet\,: $5+4+1=10=5+2+3$.
+\end{minipage}
+\item 
+\begin{enumerate}
+\item On suppose que la figure est magique. On obtient donc le système suivant\,: 
+$$\begin{cases}
+b+d+e&=K \\
+d+c+f&=K \\
+b+a+f&=K\\
+e+a+c&=K
+\end{cases}$$
+
+On somme ces quatre équations et on obtient\,:
+$$2a+2b+2c+2d+2e+2f=4K$$
+$$2(a+b+c+d+e+f)=4K$$
+$$2\times(1+2+3+4+5+6)=4K$$
+$$\boxed{4K=42}$$
+\item On ne peut pas trouver une numérotation magique de cette figure car $42$ n'est pas divisible par $4$, donc on ne peut pas trouver un $K$ entier tel que
+$4K=42$.
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item Les entiers $\{a,c,e\}$ correspondent à trois entiers distincts de l'ensemble $\{1,2,3,4,5,6\}$. Le triplet de plus petite somme est $\{1,2,3\}$ et 
+celui de plus grande somme est $\{4,5,6\}$.
+
+Donc au minimum $a+c+e=1+2+3=6$ et au maximum $a+c+e=4+5+6=15$.
+$$\boxed{6\leqslant a+c+e \leqslant 15}$$
+\item On suppose que la numérotation de cette figure est magique. On obtient le système suivant :
+$$\begin{cases}
+a+b+b&=K\\
+c+d+e&=K\\
+e+f+a&=K
+\end{cases}$$
+On somme ces trois équations et on obtient :
+$$2a+2e+2c+b+d+f=3K$$
+$$a+c+e+(a+b+c+d+e+f)=3K$$
+$$a+c+e=3K-(1+2+3+4+5+6)$$
+$$a+c+e=3K-21$$
+$$\boxed{a+c+e=3(K-7)}$$
+\item D'après les deux questions précédentes, on a\, :
+$$6\leqslant 3(K-7)\leqslant 15$$
+$$2\leqslant K-7\leqslant 5$$
+$$9\leqslant K\leqslant 12$$
+Nous avons raisonné par implication, il faut maintenant montrer que l'on peut trouver des figures magiques pour chacune des quatre constantes possibles.
+
+
+\begin{figure}[H]
+\begin{minipage}{0.22\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-1,0)(2,4.3)
+\psset{xunit=0.5cm,yunit=0.8cm,algebraic=true,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-2}{4}{(-5-3*x)/-2}
+\psplot{-2}{4}{(--4-0*x)/4}
+\psplot{-2}{4}{(-11--3*x)/-2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,4)
+\rput[bl](0.8,4.25){\large\black{$1$}}
+\psdots[dotstyle=*,linecolor=blue](-1,1)
+\rput[bl](-0.7,1.2){\large\black{$3$}}
+\psdots[dotstyle=*,linecolor=blue](3,1)
+\rput[bl](3.1,1.26){\large\black{$2$}}
+\psdots[dotstyle=*,linecolor=blue](-0.02,2.46)
+\rput[bl](0.25,2.6){\large\black{$5$}}
+\psdots[dotstyle=*,linecolor=blue](2.04,2.44)
+\rput[bl](2.11,2.6){\large\black{$6$}}
+\psdots[dotstyle=*,linecolor=blue](1,1)
+\rput[bl](1.1,1.26){\large\black{$4$}}
+\end{scriptsize}
+\end{pspicture*}
+\caption{K=9}
+\end{minipage}
+\hfill
+\begin{minipage}{0.22\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-1,0)(2,4.3)
+\psset{xunit=0.5cm,yunit=0.8cm,algebraic=true,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-2}{4}{(-5-3*x)/-2}
+\psplot{-2}{4}{(--4-0*x)/4}
+\psplot{-2}{4}{(-11--3*x)/-2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,4)
+\rput[bl](0.8,4.25){\large\black{$1$}}
+\psdots[dotstyle=*,linecolor=blue](-1,1)
+\rput[bl](-0.7,1.2){\large\black{$3$}}
+\psdots[dotstyle=*,linecolor=blue](3,1)
+\rput[bl](3.1,1.26){\large\black{$5$}}
+\psdots[dotstyle=*,linecolor=blue](-0.02,2.46)
+\rput[bl](0.25,2.6){\large\black{$6$}}
+\psdots[dotstyle=*,linecolor=blue](2.04,2.44)
+\rput[bl](2.11,2.6){\large\black{$4$}}
+\psdots[dotstyle=*,linecolor=blue](1,1)
+\rput[bl](1.1,1.26){\large\black{$2$}}
+\end{scriptsize}
+\end{pspicture*}
+\caption{K=10}
+\end{minipage}
+\hfill
+\begin{minipage}{0.22\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-1,0)(2,4.3)
+\psset{xunit=0.5cm,yunit=0.8cm,algebraic=true,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-2}{4}{(-5-3*x)/-2}
+\psplot{-2}{4}{(--4-0*x)/4}
+\psplot{-2}{4}{(-11--3*x)/-2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,4)
+\rput[bl](0.8,4.25){\large\black{$2$}}
+\psdots[dotstyle=*,linecolor=blue](-1,1)
+\rput[bl](-0.7,1.2){\large\black{$4$}}
+\psdots[dotstyle=*,linecolor=blue](3,1)
+\rput[bl](3.1,1.26){\large\black{$6$}}
+\psdots[dotstyle=*,linecolor=blue](-0.02,2.46)
+\rput[bl](0.25,2.6){\large\black{$5$}}
+\psdots[dotstyle=*,linecolor=blue](2.04,2.44)
+\rput[bl](2.11,2.6){\large\black{$3$}}
+\psdots[dotstyle=*,linecolor=blue](1,1)
+\rput[bl](1.1,1.26){\large\black{$1$}}
+\end{scriptsize}
+\end{pspicture*}
+\caption{K=11}
+\end{minipage}
+\hfill
+\begin{minipage}{0.22\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-1,0)(2,4.3)
+\psset{xunit=0.5cm,yunit=0.8cm,algebraic=true,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-2}{4}{(-5-3*x)/-2}
+\psplot{-2}{4}{(--4-0*x)/4}
+\psplot{-2}{4}{(-11--3*x)/-2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,4)
+\rput[bl](0.8,4.25){\large\black{$6$}}
+\psdots[dotstyle=*,linecolor=blue](-1,1)
+\rput[bl](-0.7,1.2){\large\black{$4$}}
+\psdots[dotstyle=*,linecolor=blue](3,1)
+\rput[bl](3.1,1.26){\large\black{$5$}}
+\psdots[dotstyle=*,linecolor=blue](-0.02,2.46)
+\rput[bl](0.25,2.6){\large\black{$2$}}
+\psdots[dotstyle=*,linecolor=blue](2.04,2.44)
+\rput[bl](2.11,2.6){\large\black{$1$}}
+\psdots[dotstyle=*,linecolor=blue](1,1)
+\rput[bl](1.1,1.26){\large\black{$3$}}
+\end{scriptsize}
+\end{pspicture*}
+\caption{K=12}
+\end{minipage}
+\end{figure}
+
+
+Je trouve bien une figure magique pour chacune de ces quatre constantes et on a montré que s'il existait des constantes magiques, alors elles étaient 
+comprises entre $9$ et $12$. Finalement, on a bien quatre constantes magiques qui sont $\boxed{\{9,10,11,12\}}$.
+\end{enumerate}
+\item Montrons que cette figure n'admet pas de numérotation magique.
+On remarque d'abord que\,: 
+\begin{itemize}
+\item chaque point appartient à au moins $3$ droites
+\item les trois points centraux sont reliés à tous les autres points
+\end{itemize}
+Supposons que la figure est magique de constante $K$.
+
+La plus grande somme que l'on peut faire sur la droite contenant la valeur $1$ est $1+8+9=18$\,; la plus petite somme que l'on peut faire sur la droite 
+contenant la valeur $9$ est $9+1+2=12$. Donc  on a $12\leqslant K\leqslant 18$.
+
+Appelons $a,b,c$ les trois valeurs des points centraux. $1$ ne peut pas être une de ces valeurs. En effet, si $1$ était une de ces valeurs, la constante 
+magique serait nécessairement $12$ ($1$ est relié à $9$ et à $2$, si $9$ et $2$ ne sont pas sur la même droite on a au mieux $9+1+3=13>8+2+1=11$, donc la 
+figure ne peut être magique que si $9$ et $2$ sont sur la même droite). $9$ est aussi relié à deux autres droites et il est impossible de faire $12$ avec 
+les chiffres restants. Donc si la figure est magique, $1$ ne peut pas être la valeur d'un des trois points centraux.
+
+Avec un raisonnement analogue, on montre que $9$ ne peut pas être une des trois valeurs centrales non plus.
+
+Notons $d,e,f$ les trois chiffres sur les droites passant par $1$ et par $a,b$ ou $c$, alors\,:
+
+\begin{minipage}{0.3\textwidth}
+$$\begin{cases}
+a+1+d&=K \\
+b+1+e&=K\\
+c+1+f&=K
+\end{cases}$$
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-3.5,-2)(5.5,3.5)
+\psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psplot{-7}{11}{(--16-0*x)/8}
+\psline(2,-7)(2,7)
+\psplot{-7}{11}{(-16-4*x)/-4}
+\psplot{-7}{11}{(--32-4*x)/4}
+\psplot{-7}{11}{(-0--4*x)/-4}
+\psplot{-7}{11}{(-16--4*x)/4}
+\psplot{-7}{11}{(--16-0*x)/-8}
+\psplot{-7}{11}{(-48-0*x)/-8}
+\psplot{-7}{11}{(--48-8*x)/16}
+\psplot{-7}{11}{(-8-4*x)/-8}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](-2,2)
+\rput[bl](-2.1,2.25){\large\black{$f$}}
+\psdots[dotstyle=*,linecolor=blue](6,2)
+\rput[bl](6.17,2.25){\large\black{$$}}
+\psdots[dotstyle=*,linecolor=blue](2,2)
+\rput[bl](2.17,2.25){\large\black{$b$}}
+\psdots[dotstyle=*,linecolor=blue](2,6)
+\rput[bl](2.5,6.2){\large\black{$a$}}
+\psdots[dotstyle=*,linecolor=blue](2,-2)
+\rput[bl](2.45,-1.85){\large\black{$c$}}
+\psdots[dotstyle=*,linecolor=blue](-6,-2)
+\rput[bl](-5.8,-1.85){\large\black{$$}}
+\psdots[dotstyle=*,linecolor=blue](-6,6)
+\rput[bl](-5.8,6.2){\large\black{$1$}}
+\psdots[dotstyle=*,linecolor=blue](10,6)
+\rput[bl](9.8,6.2){\large\black{$d$}}
+\psdots[dotstyle=*,linecolor=darkgray](10,-2)
+\rput[bl](10.18,-1.71){\large\black{$e$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{minipage}
+
+En sommant les trois on obtient :$a+b+c+3+d+e+f=3K$. Or $a+b+c=K$, donc $d+e+f+3=2K$. On a également $d+e+f\leqslant 9+8+7=24$. Donc on a forcément 
+$2K\leqslant 27$ or $K$ est entier donc $K\leqslant 13$.
+
+De la même manière, en notant $d',e'$ et $f'$ les trois entiers situés sur les droites contenant $9$ et un des entiers $a,b,c$, on a :
+$$\begin{cases}
+a+9+d'&=K\\
+b+9+e'&=K\\
+c+9+f'&=K
+\end{cases}$$
+En sommant les trois équations on obtient $a+b+c+27+d'+e'+f'=3K$ soit $d'+e'+f'+27=2K$. Or $d'+e'+f'\geqslant 1+2+3=6$, donc on a forcément $2K\geqslant 33$
+soit $K\geqslant 17$ car $K$ est un entier.
+
+On a donc nécessairement $K\leqslant 13$ et $K\geqslant 17$. Ce qui est absurde.
+
+Donc il n'existe pas de numérotation magique de la figure.
+\end{enumerate}
+
+\pagebreak
+\section{\textsc{Le plus court possible}}
+\subsection{\textsc{Partie A}}
+\begin{enumerate}
+\item Calculons la longueur de chacune des trois routes proposées.
+\begin{itemize}
+\item
+FIG-1 : $L=AB+BC+CD=\unit{300}{\kilo\meter}$
+\item FIG-2 : $L=AC+BD=2\sqrt{2}\times 100\simeq \unit{283}{\kilo\meter}$
+\item FIG-3 : $L=\pi\times BE+AF+DG=\pi BE+AE-FE+DE-GE=\pi BE+2\times(\sqrt{BE^2+AB^2})-2\times BE = 50\pi+100\sqrt{5}-100\simeq\unit{281}{\kilo\meter}$
+\end{itemize}
+L'assistant numéro 3 propose le réseau routier le plus court.
+\item Calculons $AE$. La médiane issue de $E$ est aussi une hauteur du triangle $AED$. Elle a la même longueur que la médiane issue de $F$ soit 
+$\frac{100-20}{2}=\unit{40}{\kilo\meter}$.
+$$AE=\sqrt{40^2+50^2}\simeq \unit{64}{\kilo\meter}$$
+\underline{Le chemin a donc une longueur\,: $4\times\sqrt{4100}+20\simeq\unit{276}{\kilo\meter}$. Il est donc plus court.}
+\end{enumerate}
+\subsection{\textsc{Partie B}}
+\begin{enumerate}
+\item Comme rappelé dans l'énoncé, le chemin le plus court entre deux points est la ligne droite. Donc la courbe reliant $A$ à $E_0$ sur la figure $5$ est
+ plus longue que le segment $[AE_0]$ sur la figure $6$. De même pour les courbes reliant $D$ à $E_0$, $B$ à $F_0$ et $C$ à $F_0$.
+
+La courbe en trait plein reliant $E_0$ à $F_0$ sur la figure $5$ est plus longue que le segment reliant $E_0$ à $F_0$. De même pour la courbe en pointillé. A
+fortiori, le réseau routier entre $E_0$ et $F_00$ est plus long sur la figure $5$ que sur la figure $6$.
+
+Finalement, chaque portion de courbe est plus longue sur la figure $5$ que sur la figure $6$, donc le réseau routier total est plus long sur la figure $5$ que
+sur la figure $6$.
+\vspace{0.3cm}
+
+\begin{minipage}{0.65\textwidth}
+\item
+\begin{enumerate}
+\item 
+On trace $D'$ le symétrique du point $D$ par rapport à $\Delta_E$. On a alors $E_0D'=E_0D$. On trace la droite $(AD')$. Elle coupe $\Delta_E$ en un point $M$.
+
+Minimiser $AE_0+E_0D$ revient à minimiser $AE_0+E_0D'$. Comme rappelé au début de l'énoncé $AE_0+E_0D'\geqslant AD'$ et il y a égalité si $E_0$ appartient au
+segment $[AD']$, c'est-à-dire si $E_0$ est au point $M$.
+
+Finalement, le point $E$ correspond au point $M$ de la figure. C'est-à-dire le point qui est sur la médiatrice de $[AD]$ et sur $\Delta_E$. C'est aussi le
+ point tel que le triangle $AED$ soit isocèle.
+\item La droite $(EF)$ est perpendiculaire aux deux droites $\Delta_E$ et $\Delta_F$. Donc la longueur $EF$ correspond à la distance entre ces deux droites, 
+c'est-à-dire la plus petite distance reliant deux points de ces droites. Donc $EF\leqslant E_0F_0$.
+\item Les points $E$ et $F$ permettent de minimiser à la fois $AE+ED$, $BF+FC$ et $EF$. Donc chacune de ces trois portions du réseau est plus courte sur la
+figure $8$ que sur la figure $7$. Donc le réseau cherché est nécessairement tel que représenté sur la figure $8$.
+\end{enumerate}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}{0.3\textwidth}
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-2.5,1)(2.5,7)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psline(-2,2)(2,2)
+\psplot{-2.5}{3}{(--28-0*x)/7}
+\psplot{-2.5}{3}{(--16--4*x)/4}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](-2,2)
+\rput[bl](-2.2,2.11){\large\black{$A$}}
+\psdots[dotstyle=*,linecolor=blue](2,2)
+\rput[bl](2.07,2.11){\large\black{$D$}}
+\psdots[dotstyle=*,linecolor=blue](-1,4)
+\rput[bl](-1.3,4.1){\large\black{$E_0$}}
+\psdots[dotstyle=*,linecolor=blue](6,4)
+\rput[bl](6.07,4.1){\large\black{$D$}}
+\rput[bl](-2.4,3.6){\large{$\Delta_E$}}
+\psdots[dotstyle=*,linecolor=blue](2,6)
+\rput[bl](1.8,6.11){\large\black{$D'$}}
+\psdots[dotstyle=*,linecolor=blue](0,4)
+\rput[bl](-0.3,4.1){\large\black{$M$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{minipage}
+\item
+\begin{enumerate}
+\item La médiatrice de $[AB]$ est un axe de symétrie de la distribution de départ donc le réseau routier idéal doit aussi être symétrique par rapport à cet 
+axe.
+\item Appelons $x$ la longueur $EF$. Calculons la longueur du réseau routier en fonction de $x$.
+
+$$L(x)=x+4\sqrt{50^2+(\frac{100-x}{2})^2}$$
+
+Calculons la dérivée de $L$ et cherchons quand elle s'annule\,:
+$$L'(x)=1+4\frac{\frac{(x-100)}{4}}{\sqrt{50^2+(\frac{100-x}{2})^2}}$$
+$$L'(x)=1+\frac{x-100}{\sqrt{50^2+(\frac{100-x}{2})^2}}$$
+$$L'(x)=1+2\frac{x-100}{\sqrt{100^2+(100-x)^2}}$$
+Pour que $L'$ s'annule, il faut que $2\frac{x-100}{\sqrt{100^2+(100-x)^2}}=-1$.
+$$2(x-100)=-\sqrt{100^2+(100-x)^2}$$
+$$4(100-x)^2=100^2+(100-x)^2$$
+$$3x^2-600x+2\times 100^2=0$$
+On résout cette équation du second degré et on trouve deux solutions, dont une où $x>100$. On ne garde que celle où $0\leqslant x \leqslant 100$ qui vaut 
+$100(1-\frac{\sqrt{3}}{3})$.
+
+Cette solution correspond bien à un minimum de $L$ car par exemple pour $x=10$ on a $L'<0$ et pour $x=80$ on a $L'>0$.
+
+$$\boxed{EF=100(1-\frac{\sqrt{3}}{3})}$$ 
+\item Calculons l'angle entre $(DE)$ et (EF), c'est la moitié de l'angle $\widehat{DEA}$.
+$$\tan(\overrightarrow{DE},\overrightarrow{EF})=\frac{50}{(100-EF)/2}=\frac{50}{50(1-1+\frac{\sqrt{3}}{3})}=\frac{1}{\frac{\sqrt{3}}{3}}=\sqrt{3}$$
+$$(\overrightarrow{DE},\overrightarrow{EF})=\arctan(\frac{\sqrt{3}/2}{1/2})=\frac{\pi}{3}$$
+$$\boxed{\widehat{DEA}=\frac{2\pi}{3}}$$
+\end{enumerate}
+\end{enumerate}
+\end{document}
